@@ -28,3 +28,9 @@ vim.opt.termguicolors = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Disable mouse clicks
+vim.api.nvim_set_option('mouse', '')
+
+-- Enable scrolling with the scroll wheel
+vim.api.nvim_set_option('mousemodel', 'popup')
