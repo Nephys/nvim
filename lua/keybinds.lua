@@ -14,3 +14,5 @@ bind('n', '<C-d>', '<C-d>zz')
 bind('n', '<C-u>', '<C-u>zz')
 
 bind('n', 'Q', '<nop>')
+
+bind('n', '<leader>h', '<cmd>nohlsearch<cr>')
