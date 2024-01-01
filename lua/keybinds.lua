@@ -1,5 +1,11 @@
 local bind = vim.keymap.set
 
+-- Move cursor in insert mode
+bind('i', '<C-h>', '<C-o>h')
+bind('i', '<C-j>', '<C-o>j')
+bind('i', '<C-k>', '<C-o>k')
+bind('i', '<C-l>', '<C-o>l')
+
 -- Move visual selection up/down
 bind('v', 'J', ":m '>+1<CR>gv=gv")
 bind('v', 'K', ":m '<-2<CR>gv=gv")
