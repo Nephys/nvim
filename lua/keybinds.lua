@@ -1,4 +1,3 @@
-vim.g.mapleader = " "
 local bind = vim.keymap.set
 
 -- Move visual selection up/down
@@ -17,3 +16,18 @@ bind('n', 'Q', '<nop>')
 bind('n', '<C-z>', '<nop>')
 
 bind('n', '<leader>h', '<cmd>nohlsearch<cr>')
+
+----- PLUGINS -----
+
+-- Telescope
+bind('n', '<leader>ff', require('telescope.builtin').find_files, {})
+bind('n', '<leader>fg', require('telescope.builtin').live_grep, {})
+
+-- LSP
+bind('n', 'K', vim.lsp.buf.hover, {})
+bind('n', '<leader>gD', vim.lsp.buf.declaration, {})
+bind('n', '<leader>gd', vim.lsp.buf.definition, {})
+bind('n', '<leader>ca', vim.lsp.buf.code_action, {})
+bind('n', '<leader>rn', vim.lsp.buf.rename, {})
+
+----- PLUGINS -----
