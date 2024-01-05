@@ -6,13 +6,13 @@ vim.opt.fileencoding = 'utf-8'
 
 vim.opt.signcolumn = 'yes'
 
-vim.o.wrap = false
-vim.o.relativenumber = true
-vim.o.number = true
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.showmode = false
+vim.opt.wrap = false
+vim.opt.relativenumber = true
+vim.opt.number = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.showmode = false
 vim.opt.autoindent = true
 vim.opt.cursorline = false
 vim.opt.smartindent = true
@@ -30,6 +30,12 @@ vim.opt.termguicolors = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Undotree persistance
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.opt.undofile = true
 
 -- Disable mouse clicks
 vim.api.nvim_set_option('mouse', '')

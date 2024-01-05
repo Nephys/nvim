@@ -28,7 +28,9 @@ bind('n', '<leader>h', '<cmd>nohlsearch<cr>')
 -- Telescope
 bind('n', '<leader>ff', require('telescope.builtin').find_files, {})
 bind('n', '<leader>fg', require('telescope.builtin').live_grep, {})
-bind('n', '<leader>u', require("telescope").extensions.undo.undo, {})
+
+-- Undotree
+bind('n', '<leader>u', vim.cmd.UndotreeToggle, {})
 
 -- LSP
 bind('n', 'K', vim.lsp.buf.hover, {})

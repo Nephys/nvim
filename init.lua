@@ -12,13 +12,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- Load options
 require('options')
 
 -- Install/Verify plugins
 require("lazy").setup("plugins")
 
+-- Load keybinds (after plugins to also configure plugin specific keybinds)
 require('keybinds')
-require('theme')
 
 -- Small welcome message on startup
 vim.api.nvim_echo({{'welcome back ' .. vim.env.USER, 'None'}}, false, {})
