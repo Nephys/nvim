@@ -21,8 +21,6 @@ bind('n', '<C-u>', '<C-u>zz')
 bind('n', 'Q', '<nop>')
 bind('n', '<C-z>', '<nop>')
 
-bind('n', '<leader>h', '<cmd>nohlsearch<cr>')
-
 ----- PLUGINS -----
 
 -- Telescope
