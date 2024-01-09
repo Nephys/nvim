@@ -6,7 +6,7 @@ return {
             'nvim-lua/plenary.nvim'
         },
         opts = {
-            max_count = 5 -- Maximum count of repeated key presses allowed
+            max_count = 15 -- Maximum count of repeated key presses allowed
         }
     }
 }
