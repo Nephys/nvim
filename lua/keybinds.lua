@@ -1,27 +1,38 @@
 local bind = vim.keymap.set
 
 -- Move cursor in insert mode
-bind('i', '<C-h>', '<C-O>h')
-bind('i', '<C-j>', '<C-O>j')
-bind('i', '<C-k>', '<C-O>k')
-bind('i', '<C-l>', '<C-O>l')
+bind('i', '<C-h>', '<C-o>h')
+bind('i', '<C-j>', '<C-o>j')
+bind('i', '<C-k>', '<C-o>k')
+bind('i', '<C-l>', '<C-o>l')
 
 -- Move visual selection up/down
 bind('v', 'J', ":m '>+1<CR>gv=gv")
 bind('v', 'K', ":m '<-2<CR>gv=gv")
 
-bind('n', '<leader>w', '<cmd>w<cr>')                        -- Save current file
-bind('n', '<leader>wa', '<cmd>wa<cr>')                      -- Save current file
-bind('n', '<leader>e', '<cmd>Explore<cr>')                  -- Open explorer
+bind('n', '<leader>w', '<cmd>w<cr>')                    -- Save current file
+bind('n', '<leader>wa', '<cmd>wa<cr>')                  -- Save current file
+bind('n', '<leader>e', '<cmd>Explore<cr>')              -- Open explorer
+bind('n', '<leader>x', '<cmd>bd<cr>')                   -- Close buffer
 
-bind('n', '<leader>vs', '<cmd>vsplit<cr><cmd>Explore<cr>')       -- Vertical split
-bind('n', '<leader>hs', '<cmd>split<cr><cmd>Explore<cr>')        -- Horizontal split
+-- Move between buffers
+bind('n', '<Tab>', '<cmd>bnext<cr>')                    -- Next buffer
+bind('n', '<S-Tab>', '<cmd>bprev<cr>')                  -- Previous buffer
+
+-- Splits
+bind('n', '<C-Up>', '<cmd>horizontal resize +5<cr>')
+bind('n', '<C-Down>', '<cmd>horizontal resize -5<cr>')
+bind('n', '<C-Left>', '<cmd>vertical resize -5<cr>')
+bind('n', '<C-Right>', '<cmd>vertical resize +5<cr>')
+
+bind('n', '<leader>vs', '<cmd>vsplit<cr>')              -- Vertical split
+bind('n', '<leader>hs', '<cmd>split<cr>')               -- Horizontal split
 
 -- Center half page jumps
 bind('n', '<C-d>', '<C-d>zz')
 bind('n', '<C-u>', '<C-u>zz')
 
-bind('n', 'Q', '<nop>')                                     -- Stinky, me no like, this goes away >:(
+bind('n', 'Q', '<nop>')                                 -- Stinky, me no like, this goes away >:(
 bind('n', '<C-z>', '<nop>')
 
 ----- PLUGINS -----
@@ -29,6 +40,7 @@ bind('n', '<C-z>', '<nop>')
 -- Telescope
 bind('n', '<leader>ff', require('telescope.builtin').find_files, {})
 bind('n', '<leader>fg', require('telescope.builtin').live_grep, {})
+bind('n', '<leader>fb', require('telescope.builtin').buffers, {})
 
 -- Undotree
 bind('n', '<leader>u', vim.cmd.UndotreeToggle, {})

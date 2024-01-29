@@ -22,5 +22,8 @@ require("lazy").setup("plugins")
 -- Load keybinds (after plugins to also configure plugin specific keybinds)
 require('keybinds')
 
+-- Custom commands
+require('commands')
+
 -- Small welcome message on startup
 vim.api.nvim_echo({{'welcome back ' .. vim.env.USER, 'None'}}, false, {})

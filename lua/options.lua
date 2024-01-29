@@ -23,9 +23,11 @@ vim.opt.cmdheight = 1
 vim.opt.laststatus = 3
 vim.opt.expandtab = true
 vim.opt.scrolloff = 10
+vim.opt.sidescrolloff = 10
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
+vim.opt.completeopt = { 'menuone', 'noselect' }
 
 vim.opt.termguicolors = true
 
