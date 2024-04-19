@@ -16,8 +16,8 @@ bind('n', '<leader>e', '<cmd>Explore<cr>')              -- Open explorer
 bind('n', '<leader>x', '<cmd>bd<cr>')                   -- Close buffer
 
 -- Move between buffers
-bind('n', '<Tab>', '<cmd>bnext<cr>')                    -- Next buffer
-bind('n', '<S-Tab>', '<cmd>bprev<cr>')                  -- Previous buffer
+bind('n', '<Tab>', '<cmd>bnext<cr>zz')                  -- Next buffer
+bind('n', '<S-Tab>', '<cmd>bprev<cr>zz')                -- Previous buffer
 
 -- Splits
 bind('n', '<C-Up>', '<cmd>horizontal resize +5<cr>')

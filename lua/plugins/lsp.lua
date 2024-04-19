@@ -17,7 +17,7 @@ return {
             require('mason-lspconfig').setup({
                 -- NOTE: Do not forget to configure them with lspconfig bellow
                 ensure_installed = {
-                    'clangd', --[['autotools_ls', 'cmake',]]--
+                    'clangd', 'autotools_ls', 'cmake',
                     'lua_ls', 'marksman', 'jsonls',
                     'tsserver', 'html', 'cssls',
                     'yamlls', 'ltex'
@@ -37,8 +37,12 @@ return {
             lspconfig.clangd.setup({
                 capabilities = capabilities
             })
-            --[[lspconfig.autotools_ls.setup({})
-            lspconfig.cmake.setup({})]]--
+            lspconfig.autotools_ls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.cmake.setup({
+                capabilities = capabilities
+            })
             lspconfig.lua_ls.setup({
                 capabilities = capabilities
             })

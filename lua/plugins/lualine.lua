@@ -6,7 +6,15 @@ return {
         },
         opts = {
             options = {
-                theme = 'catppuccin-mocha'
+                theme = 'catppuccin-mocha',
+            },
+            sections = {
+                lualine_c = {
+                    {
+                        'filename',
+                        path = 1
+                    }
+                }
             }
         }
     }
