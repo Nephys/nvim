@@ -28,6 +28,7 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 vim.opt.completeopt = { 'menuone', 'noselect' }
+vim.opt.colorcolumn = "160"
 
 vim.opt.termguicolors = true
 
