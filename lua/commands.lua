@@ -6,6 +6,7 @@ vim.api.nvim_create_user_command(
         for _, reg in pairs(registers) do
             vim.fn.setreg(reg, {})
         end
+        vim.api.nvim_echo({{'wiped registers'}}, false, {})
     end,
     { nargs = 0 }
 )
@@ -15,6 +16,7 @@ vim.api.nvim_create_user_command(
     'WipeReg',
     function(opts)
         vim.fn.setreg(opts.args, {})
+        vim.api.nvim_echo({{'wiped register ["' .. opts.args .. '"]', 'None'}}, false, {})
     end,
     { nargs = 1 }
 )
