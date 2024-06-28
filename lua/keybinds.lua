@@ -25,8 +25,8 @@ bind('n', '<C-Down>', '<cmd>horizontal resize -5<cr>')
 bind('n', '<C-Left>', '<cmd>vertical resize -5<cr>')
 bind('n', '<C-Right>', '<cmd>vertical resize +5<cr>')
 
-bind('n', '<leader>vs', '<cmd>vsplit<cr>')              -- Vertical split
-bind('n', '<leader>hs', '<cmd>split<cr>')               -- Horizontal split
+bind('n', '<leader>vs', '<cmd>vsplit<cr><C-w>w')              -- Vertical split
+bind('n', '<leader>hs', '<cmd>split<cr><C-w>w')               -- Horizontal split
 
 -- Center half page jumps
 bind('n', '<C-d>', '<C-d>zz')
